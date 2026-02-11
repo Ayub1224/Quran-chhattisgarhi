@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+/* ── Light theme (default) ── */
+:root {
+  --bg-primary: #F5F0E8;
+  --bg-card: #FFFFFF;
+  --bg-surface: #F0EBE1;
+  --text-primary: #2D2D2A;
+  --text-secondary: #4A4A4A;
+  --text-tertiary: #6B7280;
+  --accent: #1B5E3A;
+  --accent-hover: #16502F;
+  --accent-soft: #E8F5E9;
+  --border: #D4C9B8;
+  --border-light: #E8E0D4;
+  --shadow: rgba(0, 0, 0, 0.06);
+  --badge-bg: #1B5E3A;
+  --badge-text: #FFFFFF;
+  --nav-bg: #FFFFFF;
+  --nav-border: #E8E0D4;
+  --nav-inactive: #9CA3AF;
+}
+
+/* ── Dark theme ── */
+.dark {
+  --bg-primary: #0D1117;
+  --bg-card: #151D28;
+  --bg-surface: #1A2332;
+  --text-primary: #E8E0D0;
+  --text-secondary: #9CA3AF;
+  --text-tertiary: #7B8794;
+  --accent: #C9A84C;
+  --accent-hover: #B8993F;
+  --accent-soft: #2A2520;
+  --border: #1E2A3A;
+  --border-light: #1A2332;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --badge-bg: #C9A84C;
+  --badge-text: #0D1117;
+  --nav-bg: #0D1117;
+  --nav-border: #1A2332;
+  --nav-inactive: #4B5563;
+}
+
+@theme inline {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-card: var(--bg-card);
+  --color-bg-surface: var(--bg-surface);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-border: var(--border);
+  --color-border-light: var(--border-light);
+  --color-shadow: var(--shadow);
+  --color-badge-bg: var(--badge-bg);
+  --color-badge-text: var(--badge-text);
+  --color-nav-bg: var(--nav-bg);
+  --color-nav-border: var(--nav-border);
+  --color-nav-inactive: var(--nav-inactive);
+
+  --font-arabic: 'Noto Naskh Arabic', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-devanagari: 'Noto Sans Devanagari', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Arabic text styling ── */
+.arabic-text {
+  font-family: 'Noto Naskh Arabic', serif;
+  direction: rtl;
+  line-height: 2.2;
+  letter-spacing: 0.02em;
+}
+
+/* Responsive adjustment for Arabic text on larger screens */
+@media (min-width: 768px) {
+  .arabic-text {
+    line-height: 2.4;
+  }
+}
+
+/* ── Chhattisgarhi/Devanagari styling ── */
+.devanagari-text {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  .devanagari-text {
+    line-height: 2.0;
+  }
+}
+
+/* ── Scrollbar styling ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* ── Smooth transitions ── */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
