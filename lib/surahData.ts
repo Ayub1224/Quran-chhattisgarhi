@@ -21,7 +21,7 @@ export interface ReadingPosition {
     surahName: string;
 }
 
-// Surah metadata for surahs 1–73
+// Surah metadata for all 114 surahs
 export const surahList: SurahMeta[] = [
     { number: 1, arabicName: 'الفاتحة', englishName: 'Al-Fatihah', translation: 'The Opening', ayahCount: 7, revelationType: 'Meccan' },
     { number: 2, arabicName: 'البقرة', englishName: 'Al-Baqarah', translation: 'The Cow', ayahCount: 286, revelationType: 'Medinan' },
@@ -96,6 +96,47 @@ export const surahList: SurahMeta[] = [
     { number: 71, arabicName: 'نوح', englishName: 'Nuh', translation: 'Noah', ayahCount: 28, revelationType: 'Meccan' },
     { number: 72, arabicName: 'الجن', englishName: 'Al-Jinn', translation: 'The Jinn', ayahCount: 28, revelationType: 'Meccan' },
     { number: 73, arabicName: 'المزمل', englishName: 'Al-Muzzammil', translation: 'The Enshrouded One', ayahCount: 20, revelationType: 'Meccan' },
+    { number: 74, arabicName: 'المدثر', englishName: 'Al-Muddaththir', translation: 'The Cloaked One', ayahCount: 56, revelationType: 'Meccan' },
+    { number: 75, arabicName: 'القيامة', englishName: 'Al-Qiyamah', translation: 'The Resurrection', ayahCount: 40, revelationType: 'Meccan' },
+    { number: 76, arabicName: 'الإنسان', englishName: 'Al-Insan', translation: 'The Human', ayahCount: 31, revelationType: 'Medinan' },
+    { number: 77, arabicName: 'المرسلات', englishName: 'Al-Mursalat', translation: 'The Emissaries', ayahCount: 50, revelationType: 'Meccan' },
+    { number: 78, arabicName: 'النبأ', englishName: 'An-Naba', translation: 'The Tidings', ayahCount: 40, revelationType: 'Meccan' },
+    { number: 79, arabicName: 'النازعات', englishName: "An-Nazi'at", translation: 'Those who Drag Forth', ayahCount: 46, revelationType: 'Meccan' },
+    { number: 80, arabicName: 'عبس', englishName: 'Abasa', translation: 'He Frowned', ayahCount: 42, revelationType: 'Meccan' },
+    { number: 81, arabicName: 'التكوير', englishName: 'At-Takwir', translation: 'The Overthrowing', ayahCount: 29, revelationType: 'Meccan' },
+    { number: 82, arabicName: 'الانفطار', englishName: 'Al-Infitar', translation: 'The Cleaving', ayahCount: 19, revelationType: 'Meccan' },
+    { number: 83, arabicName: 'المطففين', englishName: 'Al-Mutaffifin', translation: 'The Defrauding', ayahCount: 36, revelationType: 'Meccan' },
+    { number: 84, arabicName: 'الانشقاق', englishName: 'Al-Inshiqaq', translation: 'The Sundering', ayahCount: 25, revelationType: 'Meccan' },
+    { number: 85, arabicName: 'البروج', englishName: 'Al-Buruj', translation: 'The Mansions of the Stars', ayahCount: 22, revelationType: 'Meccan' },
+    { number: 86, arabicName: 'الطارق', englishName: 'At-Tariq', translation: 'The Morning Star', ayahCount: 17, revelationType: 'Meccan' },
+    { number: 87, arabicName: 'الأعلى', englishName: "Al-A'la", translation: 'The Most High', ayahCount: 19, revelationType: 'Meccan' },
+    { number: 88, arabicName: 'الغاشية', englishName: 'Al-Ghashiyah', translation: 'The Overwhelming', ayahCount: 26, revelationType: 'Meccan' },
+    { number: 89, arabicName: 'الفجر', englishName: 'Al-Fajr', translation: 'The Dawn', ayahCount: 30, revelationType: 'Meccan' },
+    { number: 90, arabicName: 'البلد', englishName: 'Al-Balad', translation: 'The City', ayahCount: 20, revelationType: 'Meccan' },
+    { number: 91, arabicName: 'الشمس', englishName: 'Ash-Shams', translation: 'The Sun', ayahCount: 15, revelationType: 'Meccan' },
+    { number: 92, arabicName: 'الليل', englishName: 'Al-Layl', translation: 'The Night', ayahCount: 21, revelationType: 'Meccan' },
+    { number: 93, arabicName: 'الضحى', englishName: 'Ad-Duha', translation: 'The Morning Hours', ayahCount: 11, revelationType: 'Meccan' },
+    { number: 94, arabicName: 'الشرح', englishName: 'Ash-Sharh', translation: 'The Relief', ayahCount: 8, revelationType: 'Meccan' },
+    { number: 95, arabicName: 'التين', englishName: 'At-Tin', translation: 'The Fig', ayahCount: 8, revelationType: 'Meccan' },
+    { number: 96, arabicName: 'العلق', englishName: 'Al-Alaq', translation: 'The Clot', ayahCount: 19, revelationType: 'Meccan' },
+    { number: 97, arabicName: 'القدر', englishName: 'Al-Qadr', translation: 'The Power', ayahCount: 5, revelationType: 'Meccan' },
+    { number: 98, arabicName: 'البينة', englishName: 'Al-Bayyinah', translation: 'The Clear Proof', ayahCount: 8, revelationType: 'Medinan' },
+    { number: 99, arabicName: 'الزلزلة', englishName: 'Az-Zalzalah', translation: 'The Earthquake', ayahCount: 8, revelationType: 'Medinan' },
+    { number: 100, arabicName: 'العاديات', englishName: "Al-'Adiyat", translation: 'The Courser', ayahCount: 11, revelationType: 'Meccan' },
+    { number: 101, arabicName: 'القارعة', englishName: "Al-Qari'ah", translation: 'The Calamity', ayahCount: 11, revelationType: 'Meccan' },
+    { number: 102, arabicName: 'التكاثر', englishName: 'At-Takathur', translation: 'The Rivalry in World Increase', ayahCount: 8, revelationType: 'Meccan' },
+    { number: 103, arabicName: 'العصر', englishName: 'Al-Asr', translation: 'The Declining Day', ayahCount: 3, revelationType: 'Meccan' },
+    { number: 104, arabicName: 'الهمزة', englishName: 'Al-Humazah', translation: 'The Traducer', ayahCount: 9, revelationType: 'Meccan' },
+    { number: 105, arabicName: 'الفيل', englishName: 'Al-Fil', translation: 'The Elephant', ayahCount: 5, revelationType: 'Meccan' },
+    { number: 106, arabicName: 'قريش', englishName: 'Quraysh', translation: 'Quraysh', ayahCount: 4, revelationType: 'Meccan' },
+    { number: 107, arabicName: 'الماعون', englishName: "Al-Ma'un", translation: 'The Small Kindnesses', ayahCount: 7, revelationType: 'Meccan' },
+    { number: 108, arabicName: 'الكوثر', englishName: 'Al-Kawthar', translation: 'The Abundance', ayahCount: 3, revelationType: 'Meccan' },
+    { number: 109, arabicName: 'الكافرون', englishName: 'Al-Kafirun', translation: 'The Disbelievers', ayahCount: 6, revelationType: 'Meccan' },
+    { number: 110, arabicName: 'النصر', englishName: 'An-Nasr', translation: 'The Divine Support', ayahCount: 3, revelationType: 'Medinan' },
+    { number: 111, arabicName: 'المسد', englishName: 'Al-Masad', translation: 'The Palm Fibre', ayahCount: 5, revelationType: 'Meccan' },
+    { number: 112, arabicName: 'الإخلاص', englishName: 'Al-Ikhlas', translation: 'The Sincerity', ayahCount: 4, revelationType: 'Meccan' },
+    { number: 113, arabicName: 'الفلق', englishName: 'Al-Falaq', translation: 'The Daybreak', ayahCount: 5, revelationType: 'Meccan' },
+    { number: 114, arabicName: 'الناس', englishName: 'An-Nas', translation: 'Mankind', ayahCount: 6, revelationType: 'Meccan' },
 ];
 
 // Reading position helpers
